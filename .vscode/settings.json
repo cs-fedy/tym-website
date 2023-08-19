@@ -1,0 +1,16 @@
+{
+  "cSpell.words": [
+    "Acceuil",
+    "actualités",
+    "clsx",
+    "devis",
+    "linebreak",
+    "propos",
+    "tailwindcss"
+  ],
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
+}

@@ -25,7 +25,6 @@ export default function Footer() {
               <FooterItem to="/services">services</FooterItem>
               <FooterItem to="/about">a propos</FooterItem>
               <FooterItem to="/news">actualités</FooterItem>
-              <FooterItem to="/contact">contact</FooterItem>
               <FooterItem to="/portfolio">portfolio</FooterItem>
             </nav>
           </div>

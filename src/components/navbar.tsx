@@ -22,7 +22,6 @@ export default function Navbar() {
           <NavbarItem to="/services">services</NavbarItem>
           <NavbarItem to="/about">a propos</NavbarItem>
           <NavbarItem to="/news">actualités</NavbarItem>
-          <NavbarItem to="/contact">contact</NavbarItem>
           <NavbarItem to="/portfolio">portfolio</NavbarItem>
         </nav>
 

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Dropdown from "./drop-down"
 import NavbarItem from "./navbar-item"
 
 export default function Navbar() {
@@ -19,7 +20,62 @@ export default function Navbar() {
         {/* navigation menu */}
         <nav className="flex items-center space-x-10">
           <NavbarItem to="/">Acceuil</NavbarItem>
-          <NavbarItem to="/services">services</NavbarItem>
+          <Dropdown label="services">
+            <div className="max-w-lg w-full flex items-start justify-between space-x-20 py-8">
+              <div className="flex items-start flex-col space-y-16">
+                <div className="flex flex-col items-start space-y-4">
+                  <span className="text-junior-red font-bold tracking-[0.01px] text-lg leading-tight">
+                    Etude de marché
+                  </span>
+
+                  <div className="flex flex-col items-start space-y-2">
+                    <NavbarItem to="/feasibility-study">
+                      Etude de faisabilité
+                    </NavbarItem>
+                    <NavbarItem to="/business-plan">business plan</NavbarItem>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-start space-y-4">
+                  <span className="text-junior-red font-bold tracking-[0.01px] text-lg leading-tight">
+                    Etude de marketing
+                  </span>
+
+                  <div className="flex flex-col items-start space-y-2">
+                    <NavbarItem to="/satisfaction-study">
+                      Etude de satisfaction
+                    </NavbarItem>
+                    <NavbarItem to="/reputation-plan">
+                      Etude de notoriété
+                    </NavbarItem>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start flex-col space-y-16">
+                <div className="flex flex-col items-start space-y-4">
+                  <span className="text-junior-red font-bold tracking-[0.01px] text-lg leading-tight">
+                    Communication
+                  </span>
+
+                  <div className="flex flex-col items-start space-y-2">
+                    <NavbarItem to="/community-management">
+                      Community management
+                    </NavbarItem>
+                    <NavbarItem to="/graphic-design">
+                      Conception graphique
+                    </NavbarItem>
+                  </div>
+                </div>
+
+                <NavbarItem to="/events">
+                  <span className="text-junior-red font-bold tracking-[0.01px] text-lg leading-tight">
+                    Événementiel
+                  </span>
+                </NavbarItem>
+              </div>
+            </div>
+          </Dropdown>
           <NavbarItem to="/about">a propos</NavbarItem>
           <NavbarItem to="/news">actualités</NavbarItem>
           <NavbarItem to="/portfolio">portfolio</NavbarItem>

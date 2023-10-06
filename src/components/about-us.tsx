@@ -28,22 +28,23 @@ export default function AboutUs() {
         </div>
         <div className="w-5/12 flex flex-col items-start">
           <span className="uppercase text-junior-gray tracking-[0.3px] leading-9 mb-5">
-            a propos nous
+            a propos de nous
           </span>
           <h2 className="font-bold text-5xl leading-tight text-junior-black w-full max-w-lg mb-7">
             Les Jeunes Marketeurs Tunisiens junior
           </h2>
           <p className="w-full max-w-xl text-junior-gray mt-5 text-lg leading-7 font-medium mb-9">
-            reconnue par la TYM Junior Entreprise s&apos;agit d&apos;un cabinet
-            de conseil créé en 2017 géré 100% par des étudiants de l&apos;école
-            supérieure de commerce Tunis, Spécialisé en Marketing et qui offre
-            une variété de services répondant aux attentes des clients.
+            Reconnue sous le nom de la TYM Junior Entreprise s&apos;agit
+            d&apos;un cabinet de conseil créé en 2017 géré 100% par des
+            étudiants de l&apos;école supérieure de commerce de Tunis,
+            Spécialisé en Marketing et qui offre une variété de services
+            répondant aux attentes des clients.
           </p>
           <Link
             href="/about-us"
             className="underline capitalize leading-8 text-junior-black font-bold"
           >
-            learn more
+            en savoir plus
           </Link>
         </div>
       </div>

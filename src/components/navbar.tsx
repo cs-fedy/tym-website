@@ -83,7 +83,7 @@ export default function Navbar() {
 
         {/* order a price */}
         <Link
-          href="/project-estimation"
+          href="/project_estimation"
           className="px-8 py-4 bg-junior-black font-bold text-junior-white capitalize rounded-md text-center"
         >
           demander un devis

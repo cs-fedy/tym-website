@@ -6,7 +6,7 @@ export default function Services() {
       <div className="w-full flex flex-col items-center space-y-16">
         <div className="items-center flex flex-col space-y-4">
           <h2 className="font-bold capitalize text-4xl leading-tight text-center text-junior-black w-full max-w-xl">
-            explorer nos services
+            explorez nos services
           </h2>
           <p className="w-full max-w-3xl text-junior-gray mt-5 text-lg leading-7 text-center font-medium">
             Libérez le potentiel de votre marque avec des stratégies marketing
@@ -26,7 +26,7 @@ export default function Services() {
             title="Etude de marketing"
             icon="/svg/bullhorn.svg"
             label="Etude de marketing icon"
-            description="Éclairage stratégique pour cibler, fidéliser et renforcer votre marque."
+            description="Éclairage stratégique pour cibler, fidéliser et renforcer l'image de votre marque."
           />
           <ServiceCard
             title="Communication digitale"

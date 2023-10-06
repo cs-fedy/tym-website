@@ -9,13 +9,13 @@ export default function Members() {
             membres executifs
           </h2>
           <p className="w-full max-w-3xl text-junior-gray mt-5 text-lg leading-7 text-center font-medium">
-            Découvrez les visages qui dirigent avec vision et conduisent avec
-            succès. Rencontrez notre équipe dirigeante, symbole d&apos;expertise
-            et d&apos;innovation.
+            Découvrez les visages qui dirigent notre cabinet de conseil et
+            conduisent avec succès. Rencontrez notre équipe dirigeante, symbole
+            d&apos;expertise et d&apos;innovation.
           </p>
         </div>
 
-        <div className="grid grid-cols-4 gap-10 items-start">
+        <div className="grid grid-cols-3 gap-10 items-start">
           <MemberCard
             picture="/images/amira-ellouh.jpg"
             label="image de amira ellouh"
@@ -57,6 +57,12 @@ export default function Members() {
             label="image de olfa ben tkhayat"
             fullName="olfa ben tkhayat"
             role="responsable rh et formations"
+          />
+          <MemberCard
+            picture="/images/siwar-brahmi.jpg"
+            label="image de siwar brahem"
+            fullName="siwar brahem"
+            role="responsable études et conseils"
           />
           <MemberCard
             picture="/images/siwar-brahmi.jpg"

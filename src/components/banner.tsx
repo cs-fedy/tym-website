@@ -18,7 +18,7 @@ export default function Banner() {
             <Image src="/svg/arrow.svg" alt="arrow" width={150} height={150} />
           </div>
           <h1 className="font-bold text-5xl leading-tight text-junior-black w-full max-w-xl">
-            Booster <span className="text-junior-red">Votre Stratégie</span>{" "}
+            Boostez <span className="text-junior-red">Votre Stratégie</span>{" "}
             Marketing
           </h1>
           <p className="w-full max-w-xl text-junior-gray mt-5 text-lg leading-7 font-medium">
@@ -26,7 +26,7 @@ export default function Banner() {
             le marketing se rejoignent
           </p>
           <Link
-            href="/project-estimation"
+            href="/project_estimation"
             className="px-8 py-4 bg-junior-red mt-8 font-bold text-junior-white capitalize rounded-md text-center"
           >
             Élevez Votre Stratégie, Demandez un Devis

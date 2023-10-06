@@ -10,7 +10,7 @@ export default function Testimonials() {
           </h2>
           <p className="w-full max-w-3xl text-junior-gray mt-5 text-lg leading-7 text-center font-medium">
             Découvrez les expériences authentiques de nos clients, exprimant
-            leur réussite.
+            leur reconnaissance.
           </p>
         </div>
 

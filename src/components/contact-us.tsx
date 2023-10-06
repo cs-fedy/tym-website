@@ -15,7 +15,7 @@ export default function ContactUs() {
           href="mailto:tymjuniorentreprise@gmail.com"
           className="px-20 py-4 bg-junior-white font-bold text-junior-black capitalize rounded-md text-center"
         >
-          contacter nous
+          contactez nous
         </Link>
       </div>
     </section>

@@ -11,7 +11,7 @@ import {
 } from "react"
 
 type StepperStore = {
-  currentStep: Step
+  currentStep?: Step
   steps: Record<string, Step>
   handleNextStep: (selectedOptions: Array<string>) => void
 }
@@ -32,18 +32,20 @@ export default function StepperProvider({
 
   const handleNextStep = useCallback(
     (selectedOptions: Array<string>) => {
+      if (currentSteps.length === 0) return
+
+      const currentStep = steps[currentSteps[0]]
+      if (!currentStep) return
+
       setCurrentSteps((prev) => {
-        const currentStepOptions = steps[currentSteps[0]]?.options
+        const currentStepOptions = currentStep.options
 
-        if (!currentStepOptions) return [...prev.slice(1), "user_details"]
-
-        if (Array.isArray(currentStepOptions))
-          return [...prev.slice(1), ...currentStepOptions]
+        if (Array.isArray(currentStepOptions)) return prev.slice(1)
 
         const nextSteps = selectedOptions.reduce((prev, curr) => {
           const nextSteps = currentStepOptions[curr]
-          if (Array.isArray(nextSteps)) return [...prev.slice(1), ...nextSteps]
-          return [...prev.slice(1), nextSteps]
+          if (Array.isArray(nextSteps)) return [...prev, ...nextSteps]
+          return [...prev, nextSteps]
         }, [] as Array<string>)
 
         return [...prev.slice(1), ...nextSteps]

@@ -1,8 +1,6 @@
 "use client"
 
 import { useCallback, useEffect, useMemo, useState } from "react"
-import ChevronLeft from "./icons/chevron-left"
-import ChevronRight from "./icons/chevron-right"
 import SliderItem, { SliderItemProps } from "./slider-item"
 
 type PartnersSliderProps = {
@@ -47,9 +45,8 @@ export default function PartnersSlider({
   return (
     <div className="w-full flex items-center">
       <button type="button" onClick={() => handleNewPage(currentPage - 1)}>
-        <div className="w-5 h-5 text-junior-black">
-          <ChevronLeft />
-        </div>
+        <i className="fa-solid fa-chevron-left text-xs"></i>
+        <span className="hidden">previous page</span>
       </button>
 
       <div className="w-full flex items-center space-x-4">
@@ -59,9 +56,8 @@ export default function PartnersSlider({
       </div>
 
       <button type="button" onClick={() => handleNewPage(currentPage + 1)}>
-        <div className="w-5 h-5 text-junior-black">
-          <ChevronRight />
-        </div>
+        <i className="fa-solid fa-chevron-right text-xs"></i>
+        <span className="hidden">next page</span>
       </button>
     </div>
   )

@@ -6,6 +6,7 @@ export const steps: Record<string, Step> = {
     id: "services",
     name: "Site ou Application?",
     options: { service_1: "site_type", service_2: "application_type" },
+    canHaveMultipleSelect: false,
   },
   site_type: {
     id: "site_type",
@@ -15,21 +16,25 @@ export const steps: Record<string, Step> = {
       service_4: ["design"],
       service_5: ["design", "content"],
     },
+    canHaveMultipleSelect: false,
   },
   design: {
     id: "design",
     name: "design",
     options: ["service_6", "service_7", "service_8"],
+    canHaveMultipleSelect: false,
   },
   content: {
     id: "content",
     name: "contenu",
     options: ["service_9", "service_10", "service_11", "service_12"],
+    canHaveMultipleSelect: true,
   },
   application_type: {
     id: "application_type",
     name: "Type d'application",
     options: ["service_13", "service_14", "service_15"],
+    canHaveMultipleSelect: false,
   },
 }
 

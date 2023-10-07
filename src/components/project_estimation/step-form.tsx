@@ -2,8 +2,9 @@
 
 import Service from "@/models/service"
 import Step from "@/models/step"
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import ServiceButton from "./service-button"
+import { SelectedServiceDetails, useServices } from "./services-context"
 import { useStepper } from "./stepper-context"
 
 type CurrentStepProps = {
@@ -11,21 +12,44 @@ type CurrentStepProps = {
   services: Array<Service>
 }
 
-type SelectedServiceDetails = {
-  serviceId: string
-  count: number
-}
-
 export default function StepForm({ step, services }: CurrentStepProps) {
   const stepper = useStepper()
+  const { handleNewSelectedServices } = useServices()
+
   const [selected, setSelected] = useState<Array<SelectedServiceDetails>>([])
 
   const handleServiceSelected = (service: Service) =>
-    setSelected((prev) => [...prev, { serviceId: service.id, count: 1 }])
+    setSelected((prev) => {
+      const isAlreadySelected = !!prev.find(
+        (item) => item.serviceId === service.id,
+      )
+
+      if (isAlreadySelected)
+        return prev.filter((item) => item.serviceId !== service.id)
+
+      const newService = { serviceId: service.id, count: 1 }
+      return prev.length == 1 && !step.canHaveMultipleSelect
+        ? [newService]
+        : [...prev, newService]
+    })
 
   const handleNextStep = () => {
+    handleNewSelectedServices(selected)
     stepper.handleNextStep(selected.map((selected) => selected.serviceId))
   }
+
+  const selectedDetailsChangeHandler = useCallback(
+    (details: SelectedServiceDetails) => {
+      setSelected((prev) =>
+        prev.map((item) =>
+          item.serviceId === details.serviceId
+            ? { ...item, count: Math.max(0, item.count + details.count) }
+            : item,
+        ),
+      )
+    },
+    [],
+  )
 
   return (
     <section className="px-36 pb-16 w-full">
@@ -37,6 +61,10 @@ export default function StepForm({ step, services }: CurrentStepProps) {
         <div className="flex items-center space-x-8">
           {services.map((service) => (
             <ServiceButton
+              selectedDetails={selected.find(
+                (item) => item.serviceId === service.id,
+              )}
+              handleSelectedDetailsChange={selectedDetailsChangeHandler}
               handleClick={handleServiceSelected}
               service={service}
               key={service.id}

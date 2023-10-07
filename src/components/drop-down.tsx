@@ -1,5 +1,4 @@
 import { PropsWithChildren } from "react"
-import ChevronDownIcon from "./icons/chevron-down"
 
 type DropdownProps = { label: string }
 
@@ -14,9 +13,7 @@ export default function Dropdown({
           {label}
         </span>
 
-        <div className="w-3 h-3 text-junior-black">
-          <ChevronDownIcon />
-        </div>
+        <i className="fa-solid fa-chevron-down text-xs"></i>
       </div>
       <div className="hidden group-hover:block absolute py-4">
         <div className="flex flex-col space-y-4 items-start bg-white border border-gray-100 rounded-md w-max text-gray-900 px-8 py-4">

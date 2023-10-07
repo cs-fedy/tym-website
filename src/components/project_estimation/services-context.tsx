@@ -17,6 +17,7 @@ export type SelectedServiceDetails = {
 
 type ServicesStore = {
   services: Array<Service>
+  totalPrice: number
   selectedServices: Array<SelectedServiceDetails>
   handleNewSelectedServices: (selected: Array<SelectedServiceDetails>) => void
 }
@@ -44,9 +45,21 @@ export default function ServicesProvider({
     [],
   )
 
+  const totalPrice = useMemo(
+    () =>
+      selectedServices.reduce((prev, curr) => {
+        const service = services.find((item) => item.id === curr.serviceId)
+        if (!service) return prev
+
+        const serviceCount = service.onlyOnce ? 1 : curr.count
+        return prev + serviceCount * service.price
+      }, 0),
+    [selectedServices, services],
+  )
+
   const store = useMemo(() => {
-    return { services, selectedServices, handleNewSelectedServices }
-  }, [services, selectedServices, handleNewSelectedServices])
+    return { services, selectedServices, handleNewSelectedServices, totalPrice }
+  }, [services, selectedServices, handleNewSelectedServices, totalPrice])
 
   return (
     <ServicesContext.Provider value={store}>

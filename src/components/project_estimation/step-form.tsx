@@ -52,33 +52,31 @@ export default function StepForm({ step, services }: CurrentStepProps) {
   )
 
   return (
-    <section className="px-36 pb-16 w-full">
-      <div className="w-full flex flex-col items-center space-y-16">
-        <h2 className="font-bold capitalize text-4xl leading-tight text-center text-junior-black w-full max-w-xl">
-          {step.name}
-        </h2>
+    <div className="w-full flex flex-col items-center space-y-16">
+      <h2 className="font-bold capitalize text-4xl leading-tight text-center text-junior-black w-full max-w-xl">
+        {step.name}
+      </h2>
 
-        <div className="flex items-center space-x-8">
-          {services.map((service) => (
-            <ServiceButton
-              selectedDetails={selected.find(
-                (item) => item.serviceId === service.id,
-              )}
-              handleSelectedDetailsChange={selectedDetailsChangeHandler}
-              handleClick={handleServiceSelected}
-              service={service}
-              key={service.id}
-            />
-          ))}
-        </div>
-
-        <button
-          onClick={handleNextStep}
-          className="px-8 py-4 bg-junior-black font-bold text-junior-white capitalize rounded-md text-center"
-        >
-          next step
-        </button>
+      <div className="flex items-center space-x-8">
+        {services.map((service) => (
+          <ServiceButton
+            selectedDetails={selected.find(
+              (item) => item.serviceId === service.id,
+            )}
+            handleSelectedDetailsChange={selectedDetailsChangeHandler}
+            handleClick={handleServiceSelected}
+            service={service}
+            key={service.id}
+          />
+        ))}
       </div>
-    </section>
+
+      <button
+        onClick={handleNextStep}
+        className="px-8 py-4 bg-junior-black font-bold text-junior-white capitalize rounded-md text-center"
+      >
+        next step
+      </button>
+    </div>
   )
 }

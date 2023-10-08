@@ -2,9 +2,9 @@
 
 import Service from "@/models/service"
 import Step from "@/models/step"
-import { useCallback, useState } from "react"
+import { useCallback, useMemo } from "react"
 import ServiceButton from "./service-button"
-import { SelectedServiceDetails, useServices } from "./services-context"
+import { useServices } from "./services-context"
 import { useStepper } from "./stepper-context"
 
 type CurrentStepProps = {
@@ -14,41 +14,21 @@ type CurrentStepProps = {
 
 export default function StepForm({ step, services }: CurrentStepProps) {
   const stepper = useStepper()
-  const { handleNewSelectedServices } = useServices()
+  const {
+    stepsSelectedServices,
+    handleSelectedService,
+    selectedDetailsChangeHandler,
+  } = useServices()
 
-  const [selected, setSelected] = useState<Array<SelectedServiceDetails>>([])
+  const selected = useMemo(
+    () => stepsSelectedServices[step.id] ?? [],
+    [step, stepsSelectedServices],
+  )
 
-  const handleServiceSelected = (service: Service) =>
-    setSelected((prev) => {
-      const isAlreadySelected = !!prev.find(
-        (item) => item.serviceId === service.id,
-      )
-
-      if (isAlreadySelected)
-        return prev.filter((item) => item.serviceId !== service.id)
-
-      const newService = { serviceId: service.id, count: 1 }
-      return prev.length == 1 && !step.canHaveMultipleSelect
-        ? [newService]
-        : [...prev, newService]
-    })
-
-  const handleNextStep = () => {
-    handleNewSelectedServices(selected)
-    stepper.handleNextStep(selected.map((selected) => selected.serviceId))
-  }
-
-  const selectedDetailsChangeHandler = useCallback(
-    (details: SelectedServiceDetails) => {
-      setSelected((prev) =>
-        prev.map((item) =>
-          item.serviceId === details.serviceId
-            ? { ...item, count: Math.max(0, item.count + details.count) }
-            : item,
-        ),
-      )
-    },
-    [],
+  const handleNextStep = useCallback(
+    () =>
+      stepper.handleNextStep(selected.map((selected) => selected.serviceId)),
+    [selected, stepper],
   )
 
   return (
@@ -60,13 +40,13 @@ export default function StepForm({ step, services }: CurrentStepProps) {
       <div className="flex items-center space-x-8">
         {services.map((service) => (
           <ServiceButton
+            key={service.id}
+            service={service}
+            handleSelectedDetailsChange={selectedDetailsChangeHandler}
+            handleClick={handleSelectedService}
             selectedDetails={selected.find(
               (item) => item.serviceId === service.id,
             )}
-            handleSelectedDetailsChange={selectedDetailsChangeHandler}
-            handleClick={handleServiceSelected}
-            service={service}
-            key={service.id}
           />
         ))}
       </div>

@@ -84,7 +84,7 @@ export default function ServicesProvider({
         const currentStepServices = prev[currentStepId]
         return {
           ...prev,
-          currentStepId: currentStepServices.map((item) =>
+          [currentStepId]: currentStepServices.map((item) =>
             item.serviceId === details.serviceId
               ? { ...item, count: Math.max(0, item.count + details.count) }
               : item,

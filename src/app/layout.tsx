@@ -18,7 +18,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body className={montserrat.className}>
         <div className="relative w-full">
           <Navbar />
-          <main className="w-full pt-40">{children}</main>
+          <main className="w-full pt-32">{children}</main>
           <Footer />
         </div>
       </body>

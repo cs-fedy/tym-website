@@ -58,10 +58,10 @@ export default function Navbar() {
           <nav className="m-auto flex w-4/5 flex-col items-start space-x-0 space-y-5 lg:flex-row lg:space-x-10 lg:space-y-0">
             <NavbarItem to="/">Acceuil</NavbarItem>
             <Dropdown label="services">
-              <div className="flex w-full flex-col items-start justify-between space-x-0 space-y-10 lg:space-x-20 lg:space-y-0 lg:py-8">
+              <div className="flex w-full flex-col  items-start justify-between space-x-0 space-y-10 lg:flex-row lg:space-x-20 lg:space-y-0 lg:py-8">
                 <div className="flex flex-col items-start space-y-16">
                   <div className="flex flex-col items-start space-y-4">
-                    <span className="text-sm font-bold leading-tight tracking-[0.01px] text-junior-red sm:text-base md:text-lg">
+                    <span className="w-max text-sm font-bold leading-tight tracking-[0.01px] text-junior-red sm:text-base md:text-lg">
                       Etude de marché
                     </span>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
                   </div>
 
                   <div className="flex flex-col items-start space-y-4">
-                    <span className="text-sm font-bold leading-tight tracking-[0.01px] text-junior-red sm:text-base md:text-lg">
+                    <span className="w-max text-sm font-bold leading-tight tracking-[0.01px] text-junior-red sm:text-base md:text-lg">
                       Etude de marketing
                     </span>
 

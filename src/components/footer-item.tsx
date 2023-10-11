@@ -10,7 +10,7 @@ export default function FooterItem({
   return (
     <Link
       href={to}
-      className="text-base font-medium capitalize leading-normal text-junior-white"
+      className="text-sm font-medium capitalize leading-normal text-junior-white md:text-base"
     >
       {children}
     </Link>

@@ -4,10 +4,10 @@ import FooterItem from "./footer-item"
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-junior-black px-36 pb-8 pt-28">
-      <div className="flex w-full flex-col items-center space-y-28">
-        <div className="grid w-full grid-cols-4 items-start">
-          <div className="flex h-full w-full items-center">
+    <footer className="w-full bg-junior-black py-10">
+      <div className="mx-auto flex w-4/5 flex-col items-center space-y-28">
+        <div className="grid w-full grid-cols-1 items-start space-y-10 md:grid-cols-3 lg:grid-cols-4 lg:space-y-0">
+          <div className="flex h-full w-full items-center justify-center md:justify-start">
             <div className="h-44 w-44">
               <Image
                 src="/svg/tym-logo-vertical.svg"
@@ -17,8 +17,9 @@ export default function Footer() {
               />
             </div>
           </div>
-          <div className="flex flex-col items-start space-y-9">
-            <span className="uppercase leading-9 tracking-[0.3px] text-junior-white/60">
+
+          <div className="flex flex-col items-start space-y-5">
+            <span className="text-sm uppercase leading-9 tracking-[0.3px] text-junior-white/60 md:text-base">
               menu
             </span>
             <nav className="flex flex-col items-start space-y-4">
@@ -28,8 +29,9 @@ export default function Footer() {
               <FooterItem to="/portfolio">portfolio</FooterItem>
             </nav>
           </div>
-          <div className="flex flex-col items-start space-y-9">
-            <span className="uppercase leading-9 tracking-[0.3px] text-junior-white/60">
+
+          <div className="flex flex-col items-start space-y-5">
+            <span className="text-sm uppercase leading-9 tracking-[0.3px] text-junior-white/60 md:text-base">
               services
             </span>
             <nav className="flex flex-col items-start space-y-4">
@@ -39,7 +41,8 @@ export default function Footer() {
               <FooterItem to="#">événementiel</FooterItem>
             </nav>
           </div>
-          <div className="flex h-full w-full items-center justify-end text-white">
+
+          <div className="flex h-full w-full items-center justify-center text-white lg:justify-end">
             <div className="flex items-center space-x-4">
               <Link
                 target="_blank"
@@ -83,20 +86,22 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full items-center justify-between">
-          <span className="mb-4 w-full max-w-2xl text-lg font-medium leading-7 text-junior-white/80">
+
+        <div className="flex w-full flex-col items-center justify-between lg:flex-row">
+          <span className="mb-4 max-w-xs text-center text-sm font-medium leading-7 text-junior-white/80 sm:text-base md:max-w-max md:text-lg">
             Copyright © 2023 Tunisian Youth Marketers. All Rights Reserved.
           </span>
+
           <div className="flex items-center space-x-4 text-junior-white/80">
             <Link
               href="#"
-              className="mb-4 text-center text-lg font-medium leading-7 text-junior-white/80"
+              className="mb-4 w-max text-center text-sm font-medium leading-7 text-junior-white/80 sm:text-base md:text-lg"
             >
               Terms of Use
             </Link>
             <Link
               href="#"
-              className="mb-4 text-center text-lg font-medium leading-7 text-junior-white/80"
+              className="mb-4 w-max text-center text-sm font-medium leading-7 text-junior-white/80 sm:text-base md:text-lg"
             >
               Privacy Policy
             </Link>

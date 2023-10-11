@@ -2,9 +2,9 @@ import PartnersSlider from "./partners-slider"
 
 export default function Partners() {
   return (
-    <section className="px-36 py-28 w-full">
-      <div className="w-full flex flex-col items-center space-y-16">
-        <h2 className="font-bold capitalize text-4xl leading-tight text-center text-junior-black w-full max-w-xl">
+    <section className="w-full px-36 py-28">
+      <div className="flex w-full flex-col items-center space-y-16">
+        <h2 className="w-full max-w-xl text-center text-4xl font-bold capitalize leading-tight text-junior-black">
           nos partenaires
         </h2>
 

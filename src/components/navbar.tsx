@@ -11,53 +11,57 @@ export default function Navbar() {
   const [isOpen, setOpen] = useState(false)
 
   return (
-    <div className="fixed top-0 left-0 right-0 bg-junior-white border-b z-10 shadow-sm border-b-junior-gray/20">
-      <div className="w-4/5 mx-auto flex items-center py-2 justify-between flex-wrap lg:flex-nowrap">
-        {/* logo */}
-        <Link href="/" className="w-40 shrink-0">
-          <Image
-            src="/svg/tym-logo.svg"
-            width={400}
-            height={400}
-            alt="tym logo"
-          />
-        </Link>
+    <div className="fixed left-0 right-0 top-0 z-10 border-b border-b-junior-gray/20 bg-junior-white shadow-sm">
+      <div className="mx-auto my-2 flex w-4/5 items-center justify-between">
+        <div className="flex w-full justify-between lg:w-max">
+          {/* logo */}
+          <Link href="/" className="w-40">
+            <Image
+              src="/svg/tym-logo.svg"
+              width={400}
+              height={400}
+              alt="tym logo"
+            />
+          </Link>
 
-        <div className="flex justify-end lg:hidden grow">
           <button
-            className={cn(isOpen ? "hidden" : "block", "text-junior-black")}
+            className={cn(
+              isOpen ? "hidden" : "block",
+              "text-junior-black lg:hidden",
+            )}
             type="button"
             onClick={() => setOpen(true)}
           >
             <i className="fa-solid fa-bars"></i>
             <span className="hidden">open menu</span>
           </button>
-
-          <button
-            className={cn(isOpen ? "block" : "hidden", "text-junior-black")}
-            type="button"
-            onClick={() => setOpen(false)}
-          >
-            <i className="fa-solid fa-xmark"></i>
-            <span className="hidden">close menu</span>
-          </button>
         </div>
 
         <div
           className={cn(
-            isOpen ? "flex flex-col my-4 w-full" : "hidden  my-0",
-            isOpen ? "space-x-0 space-y-5" : "space-x-12 space-y-0",
-            "lg:flex lg:flex-row items-center lg:justify-between",
+            isOpen ? "fixed inset-0 overflow-auto bg-junior-white" : "hidden",
+            " flex-col items-center justify-between gap-10 space-y-10 lg:flex lg:flex-row lg:space-y-0",
           )}
         >
+          <div className="mx-auto mt-10 flex w-4/5 justify-end lg:hidden">
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className={cn(isOpen ? "block" : "hidden", "text-junior-black")}
+            >
+              <i className="fa-solid fa-xmark"></i>
+              <span className="hidden">close menu</span>
+            </button>
+          </div>
+
           {/* navigation menu */}
-          <nav className="flex flex-col w-full lg:flex-row items-center space-y-5 space-x-0 lg:space-y-0 md:space-x-10">
+          <nav className="m-auto flex w-4/5 flex-col items-start space-x-0 space-y-5 lg:flex-row lg:space-x-10 lg:space-y-0">
             <NavbarItem to="/">Acceuil</NavbarItem>
             <Dropdown label="services">
-              <div className="max-w-lg w-full flex items-start justify-between space-x-20 py-8">
-                <div className="flex items-start flex-col space-y-16">
+              <div className="flex w-full flex-col items-start justify-between space-x-0 space-y-10 lg:space-x-20 lg:space-y-0 lg:py-8">
+                <div className="flex flex-col items-start space-y-16">
                   <div className="flex flex-col items-start space-y-4">
-                    <span className="text-junior-red font-bold tracking-[0.01px] text-lg leading-tight">
+                    <span className="text-sm font-bold leading-tight tracking-[0.01px] text-junior-red sm:text-base md:text-lg">
                       Etude de marché
                     </span>
 
@@ -70,7 +74,7 @@ export default function Navbar() {
                   </div>
 
                   <div className="flex flex-col items-start space-y-4">
-                    <span className="text-junior-red font-bold tracking-[0.01px] text-lg leading-tight">
+                    <span className="text-sm font-bold leading-tight tracking-[0.01px] text-junior-red sm:text-base md:text-lg">
                       Etude de marketing
                     </span>
 
@@ -85,9 +89,9 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                <div className="flex items-start flex-col space-y-16">
+                <div className="flex flex-col items-start space-y-16">
                   <div className="flex flex-col items-start space-y-4">
-                    <span className="text-junior-red font-bold tracking-[0.01px] text-lg leading-tight">
+                    <span className="text-sm font-bold leading-tight tracking-[0.01px] text-junior-red sm:text-base md:text-lg">
                       Communication
                     </span>
 
@@ -102,7 +106,7 @@ export default function Navbar() {
                   </div>
 
                   <NavbarItem to="/events">
-                    <span className="text-junior-red font-bold tracking-[0.01px] text-lg leading-tight">
+                    <span className="text-sm font-bold leading-tight tracking-[0.01px] text-junior-red sm:text-base md:text-lg">
                       Événementiel
                     </span>
                   </NavbarItem>
@@ -115,12 +119,14 @@ export default function Navbar() {
           </nav>
 
           {/* order a price */}
-          <Link
-            href="/project_estimation"
-            className="px-4 py-2 w-full bg-junior-black font-bold text-junior-white capitalize rounded-md text-center"
-          >
-            demander un devis
-          </Link>
+          <div className="m-auto flex w-4/5 flex-col items-start">
+            <Link
+              href="/project_estimation"
+              className="rounded-md bg-junior-black px-4  py-2 text-center text-xs font-bold capitalize text-junior-white hover:bg-gray-950"
+            >
+              demander un devis
+            </Link>
+          </div>
         </div>
       </div>
     </div>

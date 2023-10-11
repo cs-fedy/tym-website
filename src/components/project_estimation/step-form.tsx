@@ -32,8 +32,8 @@ export default function StepForm({ step, services }: CurrentStepProps) {
   )
 
   return (
-    <div className="w-full flex flex-col items-center space-y-16">
-      <h2 className="font-bold capitalize text-4xl leading-tight text-center text-junior-black w-full max-w-xl">
+    <div className="flex w-full flex-col items-center space-y-16">
+      <h2 className="w-full max-w-xl text-center text-4xl font-bold capitalize leading-tight text-junior-black">
         {step.name}
       </h2>
 
@@ -53,7 +53,7 @@ export default function StepForm({ step, services }: CurrentStepProps) {
 
       <button
         onClick={handleNextStep}
-        className="px-8 py-4 bg-junior-black font-bold text-junior-white capitalize rounded-md text-center"
+        className="rounded-md bg-junior-black px-8 py-4 text-center font-bold capitalize text-junior-white"
       >
         next step
       </button>

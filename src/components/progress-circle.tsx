@@ -20,12 +20,12 @@ export default function ProgressCircle({ progress }: ProgressCircleProps) {
   }, [progress])
 
   return (
-    <div className="relative w-28 h-28 rounded-full overflow-hidden bg-junior-gray">
-      <svg className="z-0 w-full h-full absolute rounded-full">
+    <div className="relative h-28 w-28 overflow-hidden rounded-full bg-junior-gray">
+      <svg className="absolute z-0 h-full w-full rounded-full">
         <path d={arc} className="fill-junior-red" />
       </svg>
-      <div className="z-5 absolute inset-4 bg-junior-white rounded-full flex items-center justify-center">
-        <span className="font-bold text-lg text-junior-red tracking-[0.3px] leading-9">
+      <div className="z-5 absolute inset-4 flex items-center justify-center rounded-full bg-junior-white">
+        <span className="text-lg font-bold leading-9 tracking-[0.3px] text-junior-red">
           {progress}%
         </span>
       </div>

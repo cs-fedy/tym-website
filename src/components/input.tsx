@@ -23,11 +23,11 @@ export default function Input({
         "flex w-full items-center space-x-4 rounded-lg border border-gray-300 px-6 py-3 text-gray-500 shadow-sm duration-300 ease-out hover:border-gray-900",
       )}
     >
-      <div className="text-junior-black text-xs">{icon}</div>
+      <div className="text-xs text-junior-black">{icon}</div>
       <div className="flex w-full flex-col">
         <label
           htmlFor={id}
-          className="text-xs leading-5 font-medium text-junior-black"
+          className="text-xs font-medium leading-5 text-junior-black"
         >
           {label}
         </label>
@@ -35,7 +35,7 @@ export default function Input({
           {...props}
           id={id}
           disabled={disabled}
-          className="mt-0.5 grow bg-transparent text-xs placeholder:text-xs leading-5 text-gray-500 focus:outline-none"
+          className="mt-0.5 grow bg-transparent text-xs leading-5 text-gray-500 placeholder:text-xs focus:outline-none"
         />
       </div>
     </div>

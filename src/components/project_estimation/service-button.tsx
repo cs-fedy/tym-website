@@ -23,7 +23,7 @@ export default function ServiceButton({
       type="button"
       onClick={() => handleClick(service)}
       className={cn(
-        "px-8 py-4 mt-8 font-bold text-junior-white capitalize rounded-md flex-col flex items-center space-y-4 text-center",
+        "mt-8 flex flex-col items-center space-y-4 rounded-md px-8 py-4 text-center font-bold capitalize text-junior-white",
         isSelected ? "bg-junior-red" : "bg-junior-gray",
       )}
     >

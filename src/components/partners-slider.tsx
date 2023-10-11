@@ -43,13 +43,13 @@ export default function PartnersSlider({
   }, [currentPage, handleNewPage, isInfinite])
 
   return (
-    <div className="w-full flex items-center">
+    <div className="flex w-full items-center">
       <button type="button" onClick={() => handleNewPage(currentPage - 1)}>
         <i className="fa-solid fa-chevron-left text-xs"></i>
         <span className="hidden">previous page</span>
       </button>
 
-      <div className="w-full flex items-center space-x-4">
+      <div className="flex w-full items-center space-x-4">
         {page.map((item, index) => (
           <SliderItem key={index} label={item.label} src={item.src} />
         ))}

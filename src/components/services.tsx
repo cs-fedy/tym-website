@@ -2,20 +2,20 @@ import ServiceCard from "./service-card"
 
 export default function Services() {
   return (
-    <section className="px-36 py-28 w-full">
-      <div className="w-full flex flex-col items-center space-y-16">
-        <div className="items-center flex flex-col space-y-4">
-          <h2 className="font-bold capitalize text-4xl leading-tight text-center text-junior-black w-full max-w-xl">
+    <section className="w-full px-36 py-28">
+      <div className="flex w-full flex-col items-center space-y-16">
+        <div className="flex flex-col items-center space-y-4">
+          <h2 className="w-full max-w-xl text-center text-4xl font-bold capitalize leading-tight text-junior-black">
             explorez nos services
           </h2>
-          <p className="w-full max-w-3xl text-junior-gray mt-5 text-lg leading-7 text-center font-medium">
+          <p className="mt-5 w-full max-w-3xl text-center text-lg font-medium leading-7 text-junior-gray">
             Libérez le potentiel de votre marque avec des stratégies marketing
             sur mesure. Nos services propulsent votre succès dans le paysage
             concurrentiel d&apos;aujourd&apos;hui.
           </p>
         </div>
 
-        <div className="grid grid-cols-4 space-x-10 items-start">
+        <div className="grid grid-cols-4 items-start space-x-10">
           <ServiceCard
             title="Etude de marché"
             icon="/svg/chart-line.svg"

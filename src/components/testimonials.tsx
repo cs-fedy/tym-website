@@ -2,19 +2,19 @@ import TestimonialsCard from "./testimonials-card"
 
 export default function Testimonials() {
   return (
-    <section className="px-36 py-28 w-full bg-junior-gray/5">
-      <div className="w-full flex flex-col items-center space-y-16">
-        <div className="items-center flex flex-col space-y-4">
-          <h2 className="font-bold capitalize text-4xl leading-tight text-center text-junior-black w-full max-w-xl">
+    <section className="w-full bg-junior-gray/5 px-36 py-28">
+      <div className="flex w-full flex-col items-center space-y-16">
+        <div className="flex flex-col items-center space-y-4">
+          <h2 className="w-full max-w-xl text-center text-4xl font-bold capitalize leading-tight text-junior-black">
             Témoignages
           </h2>
-          <p className="w-full max-w-3xl text-junior-gray mt-5 text-lg leading-7 text-center font-medium">
+          <p className="mt-5 w-full max-w-3xl text-center text-lg font-medium leading-7 text-junior-gray">
             Découvrez les expériences authentiques de nos clients, exprimant
             leur reconnaissance.
           </p>
         </div>
 
-        <div className="flex items-start space-x-10 w-full">
+        <div className="flex w-full items-start space-x-10">
           <TestimonialsCard
             fullName="ahmed ben bouzid"
             role="cofondateur et CEO opus lab"

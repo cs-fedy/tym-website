@@ -10,10 +10,10 @@ export default function PriceProgress() {
   )
 
   return (
-    <div className="w-2/3 relative">
-      <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+    <div className="relative w-2/3">
+      <div className="w-full rounded-full bg-gray-200 dark:bg-gray-700">
         <div
-          className="bg-junior-red text-xs font-medium text-gray-100 text-center py-2 px-4 leading-none rounded-full"
+          className="rounded-full bg-junior-red px-4 py-2 text-center text-xs font-medium leading-none text-gray-100"
           style={{ width: `${progress}%` }}
         >
           {totalPrice} TND

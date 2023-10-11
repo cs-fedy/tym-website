@@ -10,7 +10,7 @@ export default function NavbarItem({
   return (
     <Link
       href={to}
-      className="capitalize hover:underline w-max block decoration-junior-red text-junior-black font-medium text-base leading-normal"
+      className="block w-max text-sm font-medium capitalize leading-normal text-junior-black decoration-junior-red hover:underline"
     >
       {children}
     </Link>

@@ -4,10 +4,10 @@ import FooterItem from "./footer-item"
 
 export default function Footer() {
   return (
-    <footer className="px-36 pt-28 pb-8 w-full bg-junior-black">
-      <div className="flex flex-col space-y-28 w-full items-center">
-        <div className="w-full grid grid-cols-4 items-start">
-          <div className="w-full h-full items-center flex">
+    <footer className="w-full bg-junior-black px-36 pb-8 pt-28">
+      <div className="flex w-full flex-col items-center space-y-28">
+        <div className="grid w-full grid-cols-4 items-start">
+          <div className="flex h-full w-full items-center">
             <div className="h-44 w-44">
               <Image
                 src="/svg/tym-logo-vertical.svg"
@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col items-start space-y-9">
-            <span className="uppercase text-junior-white/60 tracking-[0.3px] leading-9">
+            <span className="uppercase leading-9 tracking-[0.3px] text-junior-white/60">
               menu
             </span>
             <nav className="flex flex-col items-start space-y-4">
@@ -29,7 +29,7 @@ export default function Footer() {
             </nav>
           </div>
           <div className="flex flex-col items-start space-y-9">
-            <span className="uppercase text-junior-white/60 tracking-[0.3px] leading-9">
+            <span className="uppercase leading-9 tracking-[0.3px] text-junior-white/60">
               services
             </span>
             <nav className="flex flex-col items-start space-y-4">
@@ -39,15 +39,15 @@ export default function Footer() {
               <FooterItem to="#">événementiel</FooterItem>
             </nav>
           </div>
-          <div className="w-full h-full items-center flex justify-end text-white">
+          <div className="flex h-full w-full items-center justify-end text-white">
             <div className="flex items-center space-x-4">
               <Link
                 target="_blank"
                 href="https://www.facebook.com/TYM.JE.ESC.Mannouba"
-                className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-junior-white"
+                className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-junior-white"
               >
                 <Image
-                  className="w-6 h-6"
+                  className="h-6 w-6"
                   src="/svg/facebook.svg"
                   alt="facebook icon"
                   width={100}
@@ -57,10 +57,10 @@ export default function Footer() {
               <Link
                 target="_blank"
                 href="https://www.instagram.com/tunisian_youth_marketers/"
-                className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-junior-white"
+                className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-junior-white"
               >
                 <Image
-                  className="w-6 h-6"
+                  className="h-6 w-6"
                   src="/svg/instagram.svg"
                   alt="instagram icon"
                   width={100}
@@ -70,10 +70,10 @@ export default function Footer() {
               <Link
                 target="_blank"
                 href="https://www.linkedin.com/company/tunisian-youth-marketers-tym/"
-                className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-junior-white"
+                className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-junior-white"
               >
                 <Image
-                  className="w-6 h-6"
+                  className="h-6 w-6"
                   src="/svg/linkedin.svg"
                   alt="facebook icon"
                   width={100}
@@ -83,20 +83,20 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between w-full">
-          <span className="w-full max-w-2xl text-junior-white/80 text-lg leading-7 font-medium mb-4">
+        <div className="flex w-full items-center justify-between">
+          <span className="mb-4 w-full max-w-2xl text-lg font-medium leading-7 text-junior-white/80">
             Copyright © 2023 Tunisian Youth Marketers. All Rights Reserved.
           </span>
-          <div className="flex items-center text-junior-white/80 space-x-4">
+          <div className="flex items-center space-x-4 text-junior-white/80">
             <Link
               href="#"
-              className="text-center text-junior-white/80 text-lg leading-7 font-medium mb-4"
+              className="mb-4 text-center text-lg font-medium leading-7 text-junior-white/80"
             >
               Terms of Use
             </Link>
             <Link
               href="#"
-              className="text-center text-junior-white/80 text-lg leading-7 font-medium mb-4"
+              className="mb-4 text-center text-lg font-medium leading-7 text-junior-white/80"
             >
               Privacy Policy
             </Link>

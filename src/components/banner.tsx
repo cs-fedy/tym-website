@@ -4,30 +4,30 @@ import Link from "next/link"
 export default function Banner() {
   return (
     <header className="relative overflow-x-hidden">
-      <div className="bottom-0 -right-28 absolute w-40 h-40">
+      <div className="absolute -right-28 bottom-0 h-40 w-40">
         <Image src="/svg/dots.svg" alt="dots" width={400} height={400} />
       </div>
 
-      <div className="top-44 -left-28 absolute w-40 h-40">
+      <div className="absolute -left-28 top-44 h-40 w-40">
         <Image src="/svg/dots.svg" alt="dots" width={400} height={400} />
       </div>
 
-      <div className="flex items-center w-full px-36 py-10 justify-between">
-        <div className="flex flex-col items-start w-6/12 relative">
-          <div className="absolute rotate-[325deg] -translate-x-80 top-0 -translate-y-6 right-0">
+      <div className="flex w-full items-center justify-between px-36 py-10">
+        <div className="relative flex w-6/12 flex-col items-start">
+          <div className="absolute right-0 top-0 -translate-x-80 -translate-y-6 rotate-[325deg]">
             <Image src="/svg/arrow.svg" alt="arrow" width={150} height={150} />
           </div>
-          <h1 className="font-bold text-5xl leading-tight text-junior-black w-full max-w-xl">
+          <h1 className="w-full max-w-xl text-5xl font-bold leading-tight text-junior-black">
             Boostez <span className="text-junior-red">Votre Stratégie</span>{" "}
             Marketing
           </h1>
-          <p className="w-full max-w-xl text-junior-gray mt-5 text-lg leading-7 font-medium">
+          <p className="mt-5 w-full max-w-xl text-lg font-medium leading-7 text-junior-gray">
             Explorez de nouvelles opportunités avec nous - là où la jeunesse et
             le marketing se rejoignent
           </p>
           <Link
             href="/project_estimation"
-            className="px-8 py-4 bg-junior-red mt-8 font-bold text-junior-white capitalize rounded-md text-center"
+            className="mt-8 rounded-md bg-junior-red px-8 py-4 text-center font-bold capitalize text-junior-white"
           >
             Élevez Votre Stratégie, Demandez un Devis
           </Link>

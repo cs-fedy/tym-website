@@ -11,7 +11,7 @@ export default function ProjectEstimationForm() {
   if (!currentStep) return <UserForm />
 
   return (
-    <section className="px-36 pb-16 w-full flex flex-col items-center space-y-8">
+    <section className="flex w-full flex-col items-center space-y-8 px-36 pb-16">
       <PriceProgress />
       <ServicesForm step={currentStep} key={currentStep.id} />
     </section>

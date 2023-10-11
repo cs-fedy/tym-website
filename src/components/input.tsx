@@ -20,19 +20,22 @@ export default function Input({
     <div
       className={cn(
         className,
-        "flex w-full items-center gap-6 rounded-lg border border-gray-300 px-8 py-4 text-gray-500 shadow-sm duration-300 ease-out hover:border-gray-900",
+        "flex w-full items-center space-x-4 rounded-lg border border-gray-300 px-6 py-3 text-gray-500 shadow-sm duration-300 ease-out hover:border-gray-900",
       )}
     >
-      <div className="h-5 w-5 text-junior-black">{icon}</div>
+      <div className="text-junior-black text-xs">{icon}</div>
       <div className="flex w-full flex-col">
-        <label htmlFor={id} className="text-sm leading-5 text-junior-black">
+        <label
+          htmlFor={id}
+          className="text-xs leading-5 font-medium text-junior-black"
+        >
           {label}
         </label>
         <input
           {...props}
           id={id}
           disabled={disabled}
-          className="mt-1 grow bg-transparent text-sm leading-5 text-gray-500 focus:outline-none"
+          className="mt-0.5 grow bg-transparent text-xs placeholder:text-xs leading-5 text-gray-500 focus:outline-none"
         />
       </div>
     </div>

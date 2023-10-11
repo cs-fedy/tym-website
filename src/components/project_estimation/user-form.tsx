@@ -33,21 +33,23 @@ export default function UserForm() {
   })
 
   return (
-    <form onSubmit={handleSubmit} className="w-full flex justify-center pb-16">
-      <div className="w-full flex flex-col space-y-10 items-center">
-        <div className="w-full flex flex-col space-y-2 items-center">
-          <h1 className="text-4xl font-bold tracking-[0.01px] text-junior-red">
+    <form onSubmit={handleSubmit} className="w-2/3 mx-auto mb-16">
+      <div className="flex w-full flex-col space-y-10 items-center">
+        <div className="flex flex-col space-y-1 items-center max-w-xs">
+          <h1 className="text-base md:text-lg lg:text-xl xl:text-2xl font-bold tracking-[0.01px] text-junior-red">
             Coût final
           </h1>
-          <span className="text-sm font-medium text-junior-gray">
+
+          <span className="text-xs font-medium text-junior-gray">
             Le prix final estimé est:
           </span>
-          <span className="text-junior-red font-bold text-lg">
+
+          <span className="text-junior-red font-bold pt-2 text-sm lg:text-base xl:text-lg">
             {totalPrice}TND
           </span>
         </div>
 
-        <div className="flex flex-col items-center max-w-lg w-full space-y-4">
+        <div className="flex flex-col items-center w-full space-y-4">
           <Input
             type="text"
             name="fullName"
@@ -91,8 +93,9 @@ export default function UserForm() {
             label="message"
             placeholder="votre message"
           />
+
           <button
-            className="px-8 py-4 mt-8 w-full font-bold text-junior-white capitalize rounded-md flex-col flex items-center space-y-4 text-center bg-junior-red"
+            className="px-6 py-3 font-bold text-xs w-full text-junior-white capitalize rounded-md flex-col flex items-center space-y-4 text-center bg-junior-red"
             type="submit"
           >
             demender un devis maintenant

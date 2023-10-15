@@ -14,7 +14,7 @@ export default function MemberCard({
   role,
 }: MemberCardProps) {
   return (
-    <div className="flex w-full flex-col items-start space-y-6">
+    <div className="flex w-full flex-col items-start space-y-3">
       <div className="w-full overflow-hidden">
         <Image
           src={picture}
@@ -24,11 +24,11 @@ export default function MemberCard({
           className="aspect-square rounded-xl object-cover"
         />
       </div>
-      <div className="flex w-full flex-col items-start space-y-1">
-        <h3 className="w-full max-w-md text-lg font-bold capitalize leading-tight text-junior-black">
+      <div className="flex w-full flex-col items-start space-y-0.5">
+        <h3 className="w-full max-w-md text-sm font-bold capitalize leading-tight text-junior-black md:text-base lg:text-lg">
           {fullName}
         </h3>
-        <span className="mt-5 w-full max-w-sm text-lg font-medium capitalize leading-7 text-junior-gray">
+        <span className="mt-5 w-full max-w-sm text-sm font-medium capitalize leading-7 text-junior-gray md:text-base lg:text-lg">
           {role}
         </span>
       </div>

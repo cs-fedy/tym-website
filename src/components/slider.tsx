@@ -23,13 +23,13 @@ export default function Slider({
   )
 
   return (
-    <div className="mx-auto flex w-full items-center space-x-4">
+    <div className="mx-auto flex w-full items-center gap-2">
       <button type="button" onClick={() => handleSlide(current - 1)}>
         <i className="fa-solid fa-chevron-left text-xs"></i>
         <span className="hidden">previous page</span>
       </button>
 
-      <div className="flex w-full items-center space-x-4">
+      <div className="flex w-full items-center gap-4">
         {pageItems.map((item) => item)}
       </div>
 

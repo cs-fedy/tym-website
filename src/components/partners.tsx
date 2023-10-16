@@ -4,7 +4,7 @@ import Slider from "./slider"
 export default function Partners() {
   return (
     <section className="mx-auto w-4/5 py-20">
-      <div className="flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center gap-12">
         <h2 className="w-full max-w-sm text-center text-xl font-bold capitalize leading-tight text-junior-black sm:text-2xl md:max-w-lg md:text-3xl">
           nos partenaires
         </h2>

@@ -7,7 +7,7 @@ export type PartnerProps = {
 
 export default function Partner({ label, src }: PartnerProps) {
   return (
-    <div className="w-full">
+    <div className="flex w-full flex-col items-center">
       <Image
         className="object-fit aspect-square"
         src={src}

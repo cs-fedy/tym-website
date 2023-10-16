@@ -3,8 +3,8 @@ import TestimonialsCard from "./testimonials-card"
 
 export default function Testimonials() {
   return (
-    <section className="mx-auto w-4/5 py-20">
-      <div className="flex w-full flex-col items-center space-y-16">
+    <section className="mx-auto w-4/5 py-10">
+      <div className="flex w-full flex-col items-center space-y-10">
         <div className="flex flex-col items-center space-y-4">
           <h2 className="w-full max-w-sm text-center text-xl font-bold capitalize leading-tight text-junior-black sm:text-2xl md:max-w-lg md:text-3xl">
             Témoignages

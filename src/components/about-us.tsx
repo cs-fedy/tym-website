@@ -3,12 +3,12 @@ import Link from "next/link"
 
 export default function AboutUs() {
   return (
-    <section className="mx-auto flex w-4/5 flex-col items-center py-20">
+    <section className="mx-auto flex w-4/5 flex-col items-center pb-10">
       <div className="flex w-full flex-col-reverse items-center justify-around space-y-10 lg:flex-row lg:space-y-0">
         {/* team picture */}
         <div className="relative mr-auto mt-8 w-11/12 lg:mt-0 lg:w-6/12">
           <Image
-            src="/images/tym-team.jpg"
+            src="/images/tym-team.jpeg"
             className="rounded-xl"
             alt="tunisian youth marketer team cover"
             width={1047}
@@ -18,10 +18,10 @@ export default function AboutUs() {
           <div className="absolute bottom-0 right-0 flex w-max translate-x-1/3 translate-y-1/3 flex-col items-center rounded-lg bg-junior-red px-6 py-4 lg:px-10 lg:py-5">
             <div className="flex items-center space-x-2">
               <span className="text-xl font-bold text-junior-white lg:text-6xl">
-                6
+                7
               </span>
               <span className="w-full max-w-[5em] text-center text-sm font-bold capitalize text-junior-white lg:text-xl">
-                eme
+                éme
               </span>
             </div>
 

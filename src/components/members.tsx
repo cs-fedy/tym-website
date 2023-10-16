@@ -20,117 +20,129 @@ export default function Members() {
         <div className="block w-full lg:hidden">
           <Slider>
             <MemberCard
-              picture="/images/amira-ellouh.jpg"
+              picture="/images/amira-ellouh.jpeg"
               label="image de amira ellouh"
               fullName="amira ellouh"
               role="présidente"
             />
             <MemberCard
-              picture="/images/wided-mekki.jpg"
-              label="image de wided mekki"
-              fullName="wided mekki"
+              picture="/images/lina-haj-kasem.jpeg"
+              label="image de lina haj kacem"
+              fullName="lina haj kacem"
               role="vice présidente"
             />
             <MemberCard
-              picture="/images/abir-ouerghi.jpg"
-              label="image de abir ouerghi"
-              fullName="abir ouerghi"
+              picture="/images/amal-said.jpeg"
+              label="image de amal said"
+              fullName="amal said"
               role="secrétaire général"
             />
             <MemberCard
-              picture="/images/khalil-zouari.jpg"
-              label="image de khalil zouari"
-              fullName="khalil zouari"
+              picture="/images/baha-abidi.jpeg"
+              label="image de baha abidi"
+              fullName="baha abidi"
               role="trésorier"
             />
             <MemberCard
-              picture="/images/malek-zareglayoun.jpg"
-              label="image de malek zareglayoun"
-              fullName="malek zareglayoun"
-              role="responsable marketing et communication"
+              picture="/images/nessrine-dhieb.jpeg"
+              label="image de nessrine dhieb"
+              fullName="nessrine dhieb"
+              role="responsable resources humaines"
             />
             <MemberCard
-              picture="/images/mohamed-derbel.jpg"
-              label="image de mohamed derbel"
-              fullName="mohamed derbel"
-              role="responsable dev commercial"
+              picture="/images/nour-soltani.jpeg"
+              label="image de nour soltani"
+              fullName="nour soltani"
+              role="responsable management de la qualité"
             />
             <MemberCard
-              picture="/images/olfa-ben-tkhayat.jpg"
-              label="image de olfa ben tkhayat"
-              fullName="olfa ben tkhayat"
-              role="responsable rh et formations"
+              picture="/images/khalil-rjab.jpeg"
+              label="image de khalil rjab"
+              fullName="khalil rjab"
+              role="responsable développement commerciale"
             />
             <MemberCard
-              picture="/images/siwar-brahmi.jpg"
-              label="image de siwar brahem"
-              fullName="siwar brahem"
-              role="responsable études et conseils"
+              picture="/images/oumaima-rabaoui.jpeg"
+              label="image de oumaima rabaoui"
+              fullName="oumaima rabaoui"
+              role="responsable études et conseil"
             />
             <MemberCard
-              picture="/images/siwar-brahmi.jpg"
-              label="image de siwar brahem"
-              fullName="siwar brahem"
-              role="responsable études et conseils"
+              picture="/images/amira-ellouh.jpeg"
+              label="image de amira ellouh"
+              fullName="amira ellouh"
+              role="responsable marketing et communication par interim"
             />
+            {/* <MemberCard
+            picture="/images/mohamed-rezgui.jpg"
+            label="image de mohamed rezgui"
+            fullName="mohamed rezgui"
+            role="responsable marketing et communication"
+          /> */}
           </Slider>
         </div>
 
         <div className="hidden grid-cols-3 items-start gap-10 lg:grid">
           <MemberCard
-            picture="/images/amira-ellouh.jpg"
+            picture="/images/amira-ellouh.jpeg"
             label="image de amira ellouh"
             fullName="amira ellouh"
             role="présidente"
           />
           <MemberCard
-            picture="/images/wided-mekki.jpg"
-            label="image de wided mekki"
-            fullName="wided mekki"
+            picture="/images/lina-haj-kasem.jpeg"
+            label="image de lina haj kacem"
+            fullName="lina haj kacem"
             role="vice présidente"
           />
           <MemberCard
-            picture="/images/abir-ouerghi.jpg"
-            label="image de abir ouerghi"
-            fullName="abir ouerghi"
+            picture="/images/amal-said.jpeg"
+            label="image de amal said"
+            fullName="amal said"
             role="secrétaire général"
           />
           <MemberCard
-            picture="/images/khalil-zouari.jpg"
-            label="image de khalil zouari"
-            fullName="khalil zouari"
+            picture="/images/baha-abidi.jpeg"
+            label="image de baha abidi"
+            fullName="baha abidi"
             role="trésorier"
           />
           <MemberCard
-            picture="/images/malek-zareglayoun.jpg"
-            label="image de malek zareglayoun"
-            fullName="malek zareglayoun"
+            picture="/images/nessrine-dhieb.jpeg"
+            label="image de nessrine dhieb"
+            fullName="nessrine dhieb"
+            role="responsable resources humaines"
+          />
+          <MemberCard
+            picture="/images/nour-soltani.jpeg"
+            label="image de nour soltani"
+            fullName="nour soltani"
+            role="responsable management de la qualité"
+          />
+          <MemberCard
+            picture="/images/khalil-rjab.jpeg"
+            label="image de khalil rjab"
+            fullName="khalil rjab"
+            role="responsable développement commerciale"
+          />
+          <MemberCard
+            picture="/images/oumaima-rabaoui.jpeg"
+            label="image de oumaima rabaoui"
+            fullName="oumaima rabaoui"
+            role="responsable études et conseil"
+          />
+          <MemberCard
+            picture="/images/amira-ellouh.jpeg"
+            label="image de amira ellouh"
+            fullName="amira ellouh"
+            role="responsable marketing et communication par interim"
+          />
+          {/* <MemberCard
+            picture="/images/mohamed-rezgui.jpg"
+            label="image de mohamed rezgui"
+            fullName="mohamed rezgui"
             role="responsable marketing et communication"
-          />
-          <MemberCard
-            picture="/images/mohamed-derbel.jpg"
-            label="image de mohamed derbel"
-            fullName="mohamed derbel"
-            role="responsable dev commercial"
-          />
-          <MemberCard
-            picture="/images/olfa-ben-tkhayat.jpg"
-            label="image de olfa ben tkhayat"
-            fullName="olfa ben tkhayat"
-            role="responsable rh et formations"
-          />
-          <MemberCard
-            picture="/images/siwar-brahmi.jpg"
-            label="image de siwar brahem"
-            fullName="siwar brahem"
-            role="responsable études et conseils"
-          />
-          <MemberCard
-            picture="/images/siwar-brahmi.jpg"
-            label="image de siwar brahem"
-            fullName="siwar brahem"
-            role="responsable études et conseils"
-          />
+          /> */}
         </div>
       </div>
     </section>

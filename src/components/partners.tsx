@@ -1,49 +1,63 @@
-import PartnersSlider from "./partners-slider"
+import Partner from "./partner"
+import Slider from "./slider"
 
 export default function Partners() {
   return (
-    <section className="w-full px-36 py-28">
-      <div className="flex w-full flex-col items-center space-y-16">
-        <h2 className="w-full max-w-xl text-center text-4xl font-bold capitalize leading-tight text-junior-black">
+    <section className="mx-auto w-4/5 py-20">
+      <div className="flex flex-col items-center space-y-2">
+        <h2 className="w-full max-w-sm text-center text-xl font-bold capitalize leading-tight text-junior-black sm:text-2xl md:max-w-lg md:text-3xl">
           nos partenaires
         </h2>
 
-        <PartnersSlider
-          size={4}
-          isInfinite={true}
-          items={[
-            { src: "/images/opus-lab.png", label: "opus lab logo" },
-            {
-              src: "/images/api.png",
-              label:
-                "agence de promotion de l'industrie et de l'innovation logo",
-            },
-            {
-              src: "/images/junior-cv.png",
-              label: "junior cv logo",
-            },
-            {
-              src: "/images/phebus-voyage.png",
-              label: "phebus voyage logo",
-            },
-            {
-              src: "/images/zerda-digital.webp",
-              label: "zerda digital logo",
-            },
-            {
-              src: "/images/spik.png",
-              label: "spik logo",
-            },
-            {
-              src: "/images/corp.png",
-              label: "corp logo",
-            },
-            {
-              src: "/images/startup-village.png",
-              label: "startup village",
-            },
-          ]}
-        />
+        <div className="block w-full lg:hidden">
+          <Slider show={1}>
+            <Partner src="/images/opus-lab.png" label="opus lab logo" />
+            <Partner
+              src="/images/api.png"
+              label="agence de promotion de l'industrie et de l'innovation logo"
+            />
+            <Partner src="/images/junior-cv.png" label="junior cv logo" />
+            <Partner
+              src="/images/phebus-voyage.png"
+              label="phebus voyage logo"
+            />
+            <Partner
+              src="/images/zerda-digital.webp"
+              label="zerda digital logo"
+            />
+            <Partner src="/images/spik.png" label="spik logo" />
+            <Partner src="/images/corp.png" label="corp logo" />
+            <Partner
+              src="/images/startup-village.png"
+              label="startup village"
+            />
+          </Slider>
+        </div>
+
+        <div className="hidden w-full lg:block">
+          <Slider show={4}>
+            <Partner src="/images/opus-lab.png" label="opus lab logo" />
+            <Partner
+              src="/images/api.png"
+              label="agence de promotion de l'industrie et de l'innovation logo"
+            />
+            <Partner src="/images/junior-cv.png" label="junior cv logo" />
+            <Partner
+              src="/images/phebus-voyage.png"
+              label="phebus voyage logo"
+            />
+            <Partner
+              src="/images/zerda-digital.webp"
+              label="zerda digital logo"
+            />
+            <Partner src="/images/spik.png" label="spik logo" />
+            <Partner src="/images/corp.png" label="corp logo" />
+            <Partner
+              src="/images/startup-village.png"
+              label="startup village"
+            />
+          </Slider>
+        </div>
       </div>
     </section>
   )

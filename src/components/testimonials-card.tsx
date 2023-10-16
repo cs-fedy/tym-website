@@ -16,7 +16,7 @@ export default function TestimonialsCard({
   role,
 }: TestimonialsCardProps) {
   return (
-    <div className="flex h-full w-full max-w-xs flex-col space-y-10 rounded-lg border border-junior-gray/10 px-6 py-3">
+    <div className="flex h-full w-full flex-col space-y-10 rounded-lg border border-junior-gray/10 px-6 py-3">
       <p className="break-words text-justify text-sm font-medium leading-7 text-junior-gray">
         {description}
       </p>

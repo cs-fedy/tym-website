@@ -1,15 +1,15 @@
 import Image from "next/image"
 
-export type SliderItemProps = {
+export type PartnerProps = {
   label: string
   src: string
 }
 
-export default function SliderItem({ label, src }: SliderItemProps) {
+export default function Partner({ label, src }: PartnerProps) {
   return (
-    <div className="w-1/4">
+    <div className="w-full">
       <Image
-        className="object-fit"
+        className="object-fit aspect-square"
         src={src}
         alt={label}
         width={200}
